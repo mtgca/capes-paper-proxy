@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       renderStatus('Capes proxy   ');
 
+	//mapping domains (manually)
+      if (page[2] == "scitation.aip.org") page[2] = "scitation-aip-org";  
+      if (page[2] == "link.springer.com") page[2] = "link-springer-com";
+
       capes = "http://" + page[2] + '.ez88.periodicos.capes.gov.br/' + page[3]
 
       chrome.tabs.query( { active: true, currentWindow: true }, function( tabs ) {
